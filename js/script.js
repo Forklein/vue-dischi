@@ -4,10 +4,23 @@ Vue.config.devtools = true;
 const app = new Vue({
     el: '#app',
     data: {
-        test: 'test',
-        data: '',
-        filterValue: '',
+        data: [],
+        filterValue: 'All',
         genre: []
+    },
+    computed: {
+        dataSort() {
+            return this.data.sort((a, b) => {
+                return (a.year - b.year);
+            });
+        },
+        filteredValue() {
+            const currentList = this.dataSort;
+            if (this.filterValue == 'All') {
+                return currentList;
+            }
+            return currentList.filter(element => (element.genre == this.filterValue));
+        }
     },
     methods: {
         getData() {
@@ -16,16 +29,6 @@ const app = new Vue({
                 .then((res) => {
                     const obj = res.data.response;
                     this.data = obj;
-                })
-                .catch((err) => {
-                    console.log(err)
-                })
-        },
-        getGenre() {
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/array/music')
-                .then((res) => {
-                    const obj = res.data.response;
                     const tempArr = [];
                     obj.forEach((element, index) => {
                         if (!tempArr.includes(element.genre)) {
@@ -37,10 +40,9 @@ const app = new Vue({
                 .catch((err) => {
                     console.log(err)
                 })
-        }
+        },
     },
     created() {
         this.getData();
-        this.getGenre();
     }
 })

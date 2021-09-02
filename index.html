@@ -27,7 +27,7 @@
         </header>
         <main>
             <div class="album d-flex">
-                <div v-for="music in data" class="card">
+                <div v-for="music in filteredValue" class="card">
                     <img :src="music.poster" alt="img">
                     <h2>{{music.title}}</h2>
                     <article>{{music.author}}</article>
