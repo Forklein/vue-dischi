@@ -21,12 +21,11 @@
         </header>
         <main>
             <div class="album d-flex">
-                <div class="card">
-                    <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg"
-                        alt="">
-                    <h2>New Jersey</h2>
-                    <article>Bon Jovi</article>
-                    <time>1988</time>
+                <div v-for="music in data" class="card">
+                    <img :src="music.poster" alt="img">
+                    <h2>{{music.title}}</h2>
+                    <article>{{music.author}}</article>
+                    <time>{{music.year}}</time>
                 </div>
             </div>
         </main>

@@ -19,6 +19,7 @@ main{
     background-color: #1e2d3b;
     height: calc(100vh - 70px);
     padding: 50px;
+    overflow: auto;
 }
 
 main .album{
@@ -29,7 +30,8 @@ main .card{
     padding: 20px;
     background-color: #2e3a46;
     text-align: center;
-    flex-basis: 200px;
+    flex-basis: 250px;
+    margin: 20px;
 }
 
 main .card img{
@@ -38,5 +40,6 @@ main .card img{
 
 .d-flex{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
