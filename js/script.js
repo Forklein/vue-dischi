@@ -7,6 +7,9 @@ const app = new Vue({
         test: 'test',
         data: '',
     },
+    mounted: {
+
+    },
     methods: {
     },
     created() {
@@ -16,6 +19,9 @@ const app = new Vue({
                 const obj = res.data.response;
                 console.log(obj);
                 this.data = obj;
+            })
+            .catch((err) => {
+                console.log(err)
             })
     }
 })

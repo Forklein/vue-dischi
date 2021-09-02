@@ -16,8 +16,14 @@
 <body>
 
     <div id="app">
-        <header>
+        <header class="d-flex">
             <img src="./img/logo.svg" alt="logo">
+            <div class="option">
+                <select>
+                    <option>All</option>
+                    <option v-for="music in data">{{music.genre}}</option>
+                </select>
+            </div>
         </header>
         <main>
             <div class="album d-flex">
@@ -30,8 +36,6 @@
             </div>
         </main>
     </div>
-
-
     <script src="./js/script.js"></script>
 </body>
 
