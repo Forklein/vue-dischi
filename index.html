@@ -5,11 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
     <title>Vue Dischi Musicali</title>
 </head>
 
 <body>
 
+    <div id="app">
+        <header>
+            <img src="./img/logo.svg" alt="logo">
+        </header>
+        <main>
+            <div class="album d-flex">
+                <div class="card">
+                    <img src="https://img.discogs.com/vknPDdrqRbT92pNRX0W4I5N91jg=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-1246953-1448927086-6590.jpeg.jpg"
+                        alt="">
+                    <h2>New Jersey</h2>
+                    <article>Bon Jovi</article>
+                    <time>1988</time>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

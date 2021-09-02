@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #2e3a46;
+    height: 70px;
+    padding: 0 150px;
+}
+
+header img{
+    width: 150px;
+    height: 70px;
+}
+
+main{
+    background-color: #1e2d3b;
+    height: calc(100vh - 70px);
+    padding: 50px;
+}
+
+main .album{
+    padding: 0 150px;
+}
+
+main .card{
+    padding: 20px;
+    background-color: #2e3a46;
+    text-align: center;
+    flex-basis: 200px;
+}
+
+main .card img{
+    width: 100%;
+}
+
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
